@@ -29,6 +29,32 @@
       .side_technologies {
         padding: 8px 16px;
       }
+
+      /*grid_portfolios*/
+
+      .grid_portfolio {
+        margin: 20px;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+      }
+
+      .item_portfolio img {
+        height: 55%;
+      }
+
+      .item_portfolio div {
+        height: 45%;
+      }
+
+      .item_portfolio a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #009688;
+      }
+
+      .item_portfolio a:hover {
+      }
     </style>
   </head>
 
@@ -135,6 +161,7 @@
         ></span>
         <div class="w3-container">
           <h1><b>Mi Portafolio</b></h1>
+          <!--
           <div class="w3-section w3-bottombar w3-padding-16">
             <span class="w3-margin-right">Filtrar:</span>
             <button class="w3-button w3-black">Todos</button>
@@ -148,11 +175,12 @@
               <i class="fa fa-map-pin w3-margin-right"></i>Web Application
             </button>
           </div>
+          -->
         </div>
       </header>
 
-      <div class="w3-row-padding">
-        <div class="w3-third w3-container">
+      <div class="grid_portfolio">
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/established.png"
             alt="established"
@@ -161,7 +189,7 @@
           />
           <div class="w3-container w3-white">
             <a href="https://established.inc/" target="_blank">
-              <p><b>Established.inc/</b></p>
+              <p><b>Established.inc</b></p>
             </a>
             <p>
               Diseño de sitio web informativo established.inc. Diseño web,
@@ -170,7 +198,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/polymerfilms.png"
             alt="polymerfilms"
@@ -187,7 +216,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/xperi.png"
             alt="xperi"
@@ -204,10 +234,8 @@
             </p>
           </div>
         </div>
-      </div>
 
-      <div class="w3-row-padding">
-        <div class="w3-third w3-container w3-margin-bottom">
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/projectcoldcase.png"
             alt="projectcoldcase"
@@ -224,7 +252,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/dts.png"
             alt="dts"
@@ -241,7 +270,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/tivo.png"
             alt="tivo"
@@ -258,10 +288,8 @@
             </p>
           </div>
         </div>
-      </div>
 
-      <div class="w3-row-padding">
-        <div class="w3-third w3-container w3-margin-bottom">
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/martinhomeexteriors.png"
             alt="martinhomeexteriors"
@@ -278,7 +306,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/allaboutpeds.png"
             alt="allaboutpeds"
@@ -295,7 +324,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/the_first_descendant.jpg"
             alt="the_first_descendant"
@@ -315,10 +345,8 @@
             </p>
           </div>
         </div>
-      </div>
 
-      <div class="w3-row-padding">
-        <div class="w3-third w3-container w3-margin-bottom">
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/sky3pr.png"
             alt="sky3pr"
@@ -335,7 +363,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/insyspr.png"
             alt="insyspr"
@@ -352,7 +381,8 @@
             </p>
           </div>
         </div>
-        <div class="w3-third w3-container w3-margin-bottom">
+
+        <div class="item_portfolio">
           <img
             src="https://raw.githubusercontent.com/jgamarradev/portfolio/main/intelutions.png"
             alt="the_first_descendant"
