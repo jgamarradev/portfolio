@@ -1,0 +1,17 @@
+#about {
+  padding: 4rem 0;
+}
+
+#about h2 {
+  color: #033faf;
+}
+
+#about .fadeInUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fa-check-circle::before {
+  color: #033faf;
+}
