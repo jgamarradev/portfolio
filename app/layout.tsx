@@ -11,12 +11,16 @@ const libreFranklin = Libre_Franklin({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jgamarradev.github.io/portfolio'),
   title: 'Juan Gamarra - Desarrollador Web Fullstack - Portafolio',
   description: '5 años creando experiencias web memorables. Confía en mi trayectoria y pasión para convertir tu sitio web en una herramienta poderosa para tu negocio.',
   icons: {
     icon: '/img/header_logo.png',
     shortcut: '/img/header_logo.png',
     apple: '/img/header_logo.png',
+  },
+  alternates: {
+    canonical: '/',
   },
   openGraph: {
     title: 'Juan Gamarra - Desarrollador Web - Fullstack Portafolio',
@@ -28,6 +32,7 @@ export const metadata: Metadata = {
         url: '/img/opengraph-web.png',
         width: 1200,
         height: 630,
+        type: 'image/png',
         alt: 'Juan Gamarra - Portafolio',
       },
     ],

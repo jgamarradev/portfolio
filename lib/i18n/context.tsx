@@ -21,6 +21,51 @@ const translations: Record<Language, Translations> = {
   en: enTranslations,
 }
 
+/**
+ * Actualiza los meta tags del documento al cambiar de idioma.
+ * Replica el comportamiento de updateMetaTags() en el i18n.js original.
+ */
+function updateMetaTags(lang: Language) {
+  const langTranslations = translations[lang]
+
+  // Update title
+  document.title = langTranslations.metaTitle
+
+  // Update meta description
+  const metaDesc = document.querySelector('meta[name="description"]')
+  if (metaDesc) {
+    metaDesc.setAttribute('content', langTranslations.metaDescription.replace(/\n/g, ' '))
+  }
+
+  // Update OG tags
+  const ogTitle = document.querySelector('meta[property="og:title"]')
+  if (ogTitle) {
+    ogTitle.setAttribute('content', langTranslations.metaOGTitle)
+  }
+
+  const ogDesc = document.querySelector('meta[property="og:description"]')
+  if (ogDesc) {
+    ogDesc.setAttribute('content', langTranslations.metaOGDescription.replace(/\n/g, ' '))
+  }
+
+  // Update OG locale
+  const ogLocale = document.querySelector('meta[property="og:locale"]')
+  if (ogLocale) {
+    ogLocale.setAttribute('content', lang === 'es' ? 'es_VE' : 'en_US')
+  }
+
+  // Update Twitter tags
+  const twitterTitle = document.querySelector('meta[name="twitter:title"]')
+  if (twitterTitle) {
+    twitterTitle.setAttribute('content', langTranslations.metaOGTitle)
+  }
+
+  const twitterDesc = document.querySelector('meta[name="twitter:description"]')
+  if (twitterDesc) {
+    twitterDesc.setAttribute('content', langTranslations.metaOGDescription.replace(/\n/g, ' '))
+  }
+}
+
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('es')
   const [mounted, setMounted] = useState(false)
@@ -41,9 +86,11 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  // Actualizar lang del HTML y meta tags al cambiar idioma
   useEffect(() => {
     if (mounted && typeof window !== 'undefined') {
       document.documentElement.lang = language
+      updateMetaTags(language)
     }
   }, [language, mounted])
 
