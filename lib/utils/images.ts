@@ -1,24 +1,21 @@
 /**
- * Helper para obtener rutas de imágenes correctas
- * Maneja basePath para producción (GitHub Pages)
+ * Base path del proyecto - debe coincidir con el nombre del repo en GitHub Pages
+ * Se usa en producción para prefijo de rutas que Next.js no maneja automáticamente:
+ * - CSS url()
+ * - href de enlaces a assets
+ * - inline styles con background-image
+ * - metadata (icons, og:image)
+ *
+ * NOTA: next/image SÍ aplica basePath automáticamente, no necesita este prefijo.
  */
-export function getImagePath(path: string): string {
-  // En desarrollo, las rutas son relativas desde public/
-  // En producción, Next.js maneja el basePath automáticamente
-  // Pero para imágenes en CSS, necesitamos manejarlo manualmente
-  if (typeof window !== 'undefined') {
-    // Cliente: usar rutas relativas
-    return path.startsWith('/') ? path : `/${path}`
-  }
-  // Servidor: retornar como está (Next.js manejará basePath)
-  return path
-}
+export const BASE_PATH = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
 
 /**
- * Para usar en estilos CSS inline o background-image
+ * Genera ruta completa para assets públicos (CSS url, href, inline styles, metadata)
+ * NO usar con el componente next/image (ya aplica basePath automáticamente)
  */
-export function getImageUrl(path: string): string {
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
-  return `${basePath}${path.startsWith('/') ? path : `/${path}`}`
+export function getAssetPath(path: string): string {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`
+  return `${BASE_PATH}${cleanPath}`
 }
 

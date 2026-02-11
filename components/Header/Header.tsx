@@ -5,6 +5,7 @@ import { Link } from 'react-scroll'
 import { useI18n } from '@/lib/i18n/context'
 import LanguageSwitcher from '@/components/LanguageSwitcher/LanguageSwitcher'
 import Image from 'next/image'
+import { getAssetPath } from '@/lib/utils/images'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -39,7 +40,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header>
+    <header style={{ backgroundImage: `url('${getAssetPath('/img/menu_bg.jpg')}')` }}>
       <div className="header-container">
         <div className="brand-logo">
           <div className="logo-container">

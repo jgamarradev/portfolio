@@ -1,6 +1,5 @@
 header {
   height: 100px;
-  background: url("/img/menu_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,7 +72,6 @@ a.contact-button {
   height: 80vh;
   display: flex;
   align-items: center;
-  background: url("/img/banner_bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

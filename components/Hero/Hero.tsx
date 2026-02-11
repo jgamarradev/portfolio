@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import { useI18n } from '@/lib/i18n/context'
 import Image from 'next/image'
 import Typed from 'typed.js'
+import { getAssetPath } from '@/lib/utils/images'
 
 export default function Hero() {
   const { t, language } = useI18n()
@@ -40,7 +41,7 @@ export default function Hero() {
   }, [language, t])
 
   return (
-    <section className="hero">
+    <section className="hero" style={{ backgroundImage: `url('${getAssetPath('/img/banner_bg.jpg')}')` }}>
       <div className="container-fluid">
         <div className="container">
           <div className="row two-columns">
@@ -67,7 +68,7 @@ export default function Hero() {
               </div>
               <div className="download-cv">
                 <a
-                  href="/curriculum/juanGamarraDevCvSpanish.pdf"
+                  href={getAssetPath('/curriculum/juanGamarraDevCvSpanish.pdf')}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

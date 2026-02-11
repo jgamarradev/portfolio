@@ -4,6 +4,7 @@ import { useI18n } from '@/lib/i18n/context'
 import Image from 'next/image'
 import portfolioData from '@/data/portfolio.json'
 import { Project } from '@/types'
+import { getAssetPath } from '@/lib/utils/images'
 
 export default function Portfolio() {
   const { t, language } = useI18n()
@@ -20,7 +21,7 @@ export default function Portfolio() {
             <div
               className="portfolio-container"
               style={{
-                background: `linear-gradient(to right, rgba(4, 67, 172, 0.6), rgba(4, 67, 172, 0.6)), url('/img/${project.image}') center / cover no-repeat`,
+                background: `linear-gradient(to right, rgba(4, 67, 172, 0.6), rgba(4, 67, 172, 0.6)), url('${getAssetPath(`/img/${project.image}`)}') center / cover no-repeat`,
               }}
             >
               <div className="project-description">
