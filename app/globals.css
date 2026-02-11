@@ -1,0 +1,171 @@
+/* Import Bootstrap CSS */
+@import url('../styles/bootstrap.min.css');
+
+/* Import all original CSS files */
+@import url('../styles/globals.css');
+@import url('../styles/hero.css');
+@import url('../styles/about.css');
+@import url('../styles/header-nav.css');
+@import url('../styles/typed.css');
+@import url('../styles/grid-styles.css');
+/* owl.carousel.min.css removed - replaced with Swiper.js */
+@import url('../styles/skill.css');
+@import url('../styles/testimonials.css');
+@import url('../styles/contact.css');
+@import url('../styles/language-switch.css');
+
+/* Font Awesome - Note: Bootstrap Icons loaded via <link> in layout.tsx */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css');
+
+/* Google Font - Libre Franklin */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base styles */
+body {
+  font-family: "Libre Franklin", "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+}
+
+@media (max-width: 575px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Additional utility classes that might be needed */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-xxl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Fix for header fixed positioning */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Utility classes for visibility */
+.hidden {
+  display: none !important;
+}
+
+.block {
+  display: block !important;
+}
+
+/* Fix for nav-burguer icons visibility */
+.nav-burguer .bi-list.hidden,
+.nav-burguer .bi-chevron-contract.hidden {
+  display: none !important;
+}
+
+/* Menu visibility for desktop - nav-menu should be visible by default on desktop */
+@media (min-width: 576px) {
+  .nav-menu {
+    display: block !important;
+  }
+  
+  .nav-menu.hidden {
+    display: block !important;
+  }
+}
+
+/* On mobile, nav-menu is hidden by default and shown when menu is open */
+@media (max-width: 575px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .nav-menu.block {
+    display: block !important;
+  }
+}
+
+/* Fix for logo container - ensure image respects container width */
+.logo-container {
+  width: 204px;
+  overflow: hidden;
+}
+
+.logo-container img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
+
+/* Fix for nav-menu links - ensure white color and cursor pointer */
+.nav-menu nav a {
+  color: white !important;
+  cursor: pointer !important;
+  text-decoration: none;
+}
+
+.nav-menu nav a:hover {
+  color: white !important;
+}
+
+/* Fix for contact button - ensure cursor pointer */
+.nav-menu .contact-button,
+a.contact-button {
+  cursor: pointer !important;
+  color: #033faf !important;
+}
+
+.nav-menu .contact-button:hover,
+a.contact-button:hover {
+  cursor: pointer !important;
+}
+
+/* Fix for two-columns layout in hero */
+.two-columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .two-columns {
+    flex-direction: column;
+  }
+}
+
+/* Fix for Skills tabs - ensure tabs work correctly */
+.tab-content .tab-pane {
+  display: none;
+}
+
+.tab-content .tab-pane.active {
+  display: block;
+}
+
+.tab-content .tab-pane.show {
+  display: block;
+}

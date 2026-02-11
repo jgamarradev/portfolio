@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "title": "Established.inc",
+    "descriptionEs": "Diseño web, maquetación y programación del sitio en base a la marca y/o manual de branding.",
+    "descriptionEn": "Web design, layout and site programming based on the brand and/or branding manual.",
+    "image": "established.png",
+    "url": "https://established.inc/"
+  },
+  {
+    "id": 2,
+    "title": "Polymerfilms",
+    "descriptionEs": "Ejecución de Rediseño de toda la Web de Polymerfilms.com, agregando nuevas funcionalidades.",
+    "descriptionEn": "Execution of complete redesign of Polymerfilms.com website, adding new functionalities.",
+    "image": "polymerfilms.png",
+    "url": "https://polymerfilms.com"
+  },
+  {
+    "id": 3,
+    "title": "Xperi",
+    "descriptionEs": "Solución de errores ondemand, Creación de nuevas secciones y Actualización de Páginas de Políticas de Privacidad.",
+    "descriptionEn": "On-demand error resolution, creation of new sections and update of Privacy Policy pages.",
+    "image": "xperi.png",
+    "url": "https://xperi.com"
+  },
+  {
+    "id": 4,
+    "title": "Project Cold Case",
+    "descriptionEs": "Rediseño de toda la web de projectcoldcase.org, agregando nuevas funcionalidades.",
+    "descriptionEn": "Complete redesign of projectcoldcase.org website, adding new functionalities.",
+    "image": "projectcoldcase.png",
+    "url": "https://projectcoldcase.org/"
+  },
+  {
+    "id": 5,
+    "title": "DTS",
+    "descriptionEs": "Creación de modulos Gutenberg para usarlos en la creación de nuevas secciones.",
+    "descriptionEn": "Creation of Gutenberg modules for use in the creation of new sections.",
+    "image": "dts.png",
+    "url": "https://dts.com"
+  },
+  {
+    "id": 6,
+    "title": "TiVo",
+    "descriptionEs": "Ejecución de diseño de módulo por componentes para sección de constructor de dashboard.",
+    "descriptionEn": "Execution of component-based module design for dashboard builder section.",
+    "image": "tivo.png",
+    "url": "https://www.tivo.com"
+  },
+  {
+    "id": 7,
+    "title": "Martin Home Exteriors",
+    "descriptionEs": "Rediseño de sección de Galería agregando nuevas funcionalidades y correción de errores encontrados.",
+    "descriptionEn": "Gallery section redesign adding new functionalities and correction of found errors.",
+    "image": "martinhomeexteriors.png",
+    "url": "https://martinhomeexteriors.com"
+  },
+  {
+    "id": 8,
+    "title": "All About Peds",
+    "descriptionEs": "Solución de Errores en algunas funcionalidades y secciones del sitio, creación de form de multiples pasos.",
+    "descriptionEn": "Error resolution in some functionalities and sections of the site, creation of multi-step form.",
+    "image": "allaboutpeds.png",
+    "url": "https://allaboutpeds.com"
+  },
+  {
+    "id": 9,
+    "title": "The First Descendant",
+    "descriptionEs": "Ejecución de Diseño de Página Web para el Lanzamiento del Video Juego The First Descendant.",
+    "descriptionEn": "Execution of Web Page Design for the Launch of the Video Game The First Descendant.",
+    "image": "the_first_descendant.jpg",
+    "url": "https://hdr10plus.org/the-first-descendant/"
+  },
+  {
+    "id": 10,
+    "title": "Sky3PR",
+    "descriptionEs": "Maquetación, programación y puesto en linea de diseño para sky3pr.com.",
+    "descriptionEn": "Layout, programming and online deployment of design for sky3pr.com.",
+    "image": "sky3pr.png",
+    "url": "https://sky3pr.com"
+  },
+  {
+    "id": 11,
+    "title": "InsysPR",
+    "descriptionEs": "Maquetación, programación y puesto en linea de diseño para insyspr.com.",
+    "descriptionEn": "Layout, programming and online deployment of design for insyspr.com.",
+    "image": "insyspr.png",
+    "url": "https://insyspr.com"
+  },
+  {
+    "id": 12,
+    "title": "Intelutions",
+    "descriptionEs": "Maquetación, programación y puesto en linea de diseño para intelutions.net.",
+    "descriptionEn": "Layout, programming and online deployment of design for intelutions.net.",
+    "image": "intelutions.png",
+    "url": "https://intelutions.net"
+  }
+]
+

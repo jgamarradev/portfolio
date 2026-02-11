@@ -1,0 +1,250 @@
+header {
+  height: 100px;
+  background: url("/img/menu_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 1.25rem;
+}
+
+/*=============================================
+MOVIL VERTICAL (320px)
+=============================================*/
+
+@media (max-width: 575px) {
+  .header-container {
+    padding: .5rem;
+  }
+}
+
+.brand-logo {
+  padding: 10px;
+}
+
+.logo-container {
+  width: 204px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+.nav-menu {
+  padding: 10px 15px;
+}
+
+.nav-menu nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu nav a {
+  padding: 10px;
+  margin: 0 10px 0 0;
+  color: white;
+  font-size: 1.25rem;
+}
+
+a.contact-button {
+  margin: 0 !important;
+}
+
+.nav-menu .contact-button {
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #00ee42;
+  padding: 10px 40px;
+  border-radius: 40px 15px;
+  display: flex;
+  align-items: center;
+  height: 35px;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  background: url("/img/banner_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+}
+
+.hero .left-column {
+  width: 50%;
+}
+
+.banner-name {
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin-left: 10px;
+  max-width: fit-content;
+  -webkit-background-clip: text;
+  background-clip: text !important;
+  background: linear-gradient(90deg, #76f4ff, #00ff47);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px transparent;
+}
+
+.banner-text {
+  width: 92%;
+  color: white;
+  font-size: 1.5rem;
+  margin: 50px 0 0 5px;
+}
+
+.hero .right-column {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-img {
+  height: 55vh;
+}
+
+.banner-img img {
+  height: 100%;
+  width: auto;
+}
+
+.download-cv {
+  margin-top: 25px;
+}
+
+.download-cv a {
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #00ee42;
+  background: #033faf;
+  font-weight: bold;
+  border: 1px solid #00ee42;
+}
+
+.download-cv a:hover {
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #033faf;
+  background: #00ee42;
+  font-weight: bold;
+}
+
+.banner-quote {
+  font-style: italic;
+  margin: 25px 0 0;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 20px auto 0;
+  max-width: fit-content;
+  -webkit-background-clip: text;
+  background-clip: text !important;
+  background: linear-gradient(90deg, #76f4ff, #00ff47);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0px transparent;
+}
+
+/*=============================================
+TABLET HORIZONTAL (LG 1024px)
+=============================================*/
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .banner-name {
+    font-size: 3rem;
+  }
+  .banner-text {
+    font-size: 1rem;
+  }
+  .banner-quote {
+    font-size: 2rem;
+  }
+}
+
+/*=============================================
+TABLET VERTICAL (MD 768px)
+=============================================*/
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .nav-menu nav div {
+    font-size: 1rem;
+  }
+
+  .banner-name {
+    font-size: 3rem;
+  }
+  .banner-text {
+    font-size: 1rem;
+  }
+  .banner-quote {
+    font-size: 2rem;
+  }
+
+  .banner-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*=============================================
+MÓVIL HORIZONTAL (SM 576px)
+=============================================*/
+
+@media (max-width: 767px) and (min-width: 576px) {
+  .nav-menu nav div {
+    font-size: 1rem;
+  }
+
+  .banner-name {
+    font-size: 3rem;
+  }
+  .banner-text {
+    font-size: 1rem;
+  }
+  .banner-quote {
+    font-size: 2rem;
+  }
+
+  .banner-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*=============================================
+MOVIL VERTICAL (320px)
+=============================================*/
+
+@media (max-width: 575px) {
+  .nav-menu nav div {
+    font-size: 1rem;
+  }
+
+  .banner-name {
+    font-size: 2rem;
+  }
+  .banner-text {
+    font-size: 1rem;
+  }
+  .banner-quote {
+    font-size: 1rem;
+  }
+
+  .banner-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    padding-top: 0;
+  }
+}

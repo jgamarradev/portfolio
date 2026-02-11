@@ -1,0 +1,35 @@
+.type-wrap {
+  font-size: 2rem;
+  color: #76f4ff;
+}
+
+/*=============================================
+MOVIL VERTICAL (320px)
+=============================================*/
+
+@media (max-width: 575px) {
+  .type-wrap {
+    font-size: 1.5rem;
+  }
+}
+
+/* the above is for styling puposes only */
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

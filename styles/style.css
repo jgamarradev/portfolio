@@ -1,0 +1,15 @@
+/********** Template CSS **********/
+/*** Hero ***/
+
+@import url("./globals.css");
+@import url("./hero.css");
+@import url("./about.css");
+@import url("./header-nav.css");
+@import url("./typed.css");
+@import url("./grid-styles.css");
+@import url("./owl.carousel.min.css");
+@import url("./skill.css");
+@import url("./testimonials.css");
+@import url("./contact.css");
+
+

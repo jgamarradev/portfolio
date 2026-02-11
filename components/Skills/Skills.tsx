@@ -1,0 +1,118 @@
+'use client'
+
+import { useState } from 'react'
+import { useI18n } from '@/lib/i18n/context'
+import experienceData from '@/data/experience.json'
+import educationData from '@/data/education.json'
+import { Experience, Education } from '@/types'
+
+const skills = [
+  'Javascript / Typescript',
+  'React Js / Vue Js',
+  'Sass / Less',
+  'jQuery / Bootstrap',
+  'Gulp Js / Webpack',
+  'Node Js / Express',
+  'PHP / Laravel',
+  'SQL / MySQL',
+  'Git / GitHub / Bitbucket',
+  'Docker',
+  'WordPress Development',
+  'Metodologías Agiles / Clickup',
+  'Azure DevOps',
+  'Zapier',
+]
+
+export default function Skills() {
+  const { t } = useI18n()
+  const [activeTab, setActiveTab] = useState<'experience' | 'education'>('experience')
+  const experiences = experienceData as Experience[]
+  const educations = educationData as Education[]
+
+  return (
+    <div className="container-xxl py-6 pb-5" id="skill">
+      <div className="container">
+        <div className="row g-5">
+          <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h1 className="display-5 mb-5">{t('skillsTitle')}</h1>
+            <div className="row align-items-center">
+              <div className="col-md-6 col-6">
+                {skills.slice(0, 7).map((skill, index) => (
+                  <div key={index} className="skill mb-4">
+                    <div className="d-flex justify-content-between">
+                      <h6 className="font-weight-bold">{skill}</h6>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="col-md-6 col-6">
+                {skills.slice(7).map((skill, index) => (
+                  <div key={index + 7} className="skill mb-4">
+                    <div className="d-flex justify-content-between">
+                      <h6 className="font-weight-bold">{skill}</h6>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <ul className="nav nav-pills rounded border border-2 border-primary mb-5">
+              <li className="nav-item w-50">
+                <button
+                  className={`nav-link w-100 py-3 fs-5 ${activeTab === 'experience' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('experience')}
+                >
+                  {t('tabExperience')}
+                </button>
+              </li>
+              <li className="nav-item w-50">
+                <button
+                  className={`nav-link w-100 py-3 fs-5 ${activeTab === 'education' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('education')}
+                >
+                  {t('tabEducation')}
+                </button>
+              </li>
+            </ul>
+            <div className="tab-content">
+              <div 
+                id="tab-1" 
+                className={`tab-pane fade show p-0 ${activeTab === 'experience' ? 'active' : ''}`}
+                style={{ display: activeTab === 'experience' ? 'block' : 'none' }}
+              >
+                <div className="row gy-5 gx-4">
+                  {experiences.map((exp, index) => (
+                    <div key={index} className="col-sm-6">
+                      <h5>{exp.title}</h5>
+                      <hr className="text-primary my-2" />
+                      <p className="text-primary mb-1">{exp.period}</p>
+                      <h6 className="mb-0">{exp.company}</h6>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div 
+                id="tab-2" 
+                className={`tab-pane fade show p-0 ${activeTab === 'education' ? 'active' : ''}`}
+                style={{ display: activeTab === 'education' ? 'block' : 'none' }}
+              >
+                <div className="row gy-5 gx-4">
+                  {educations.map((edu, index) => (
+                    <div key={index} className="col-sm-6">
+                      <h5>{edu.title}</h5>
+                      <hr className="text-primary my-2" />
+                      {edu.period && <p className="text-primary mb-1">{edu.period}</p>}
+                      <h6 className="mb-0">{edu.institution}</h6>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+

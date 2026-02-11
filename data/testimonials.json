@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "Lane Cooper",
+    "role": "Editorial Director at BizTechReports and Cysurance Institute",
+    "text": "Juan is an exceptional full-stack developer with top technical skills and strong business understanding. He led a high-pressure project for a start-up, delivering a fully featured website by CES-2023. Despite tight deadlines, he handled content, design, and programming in parallel, staying responsive to changes. He's highly recommended for web design.",
+    "image": "testimonial-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Lourdes Carrerá",
+    "role": "Mercadeo, Relaciones Públicas y Publicidad Profesional",
+    "text": "Juan Carlos Gamarra es una persona comprometida con sus proyectos, con una excelente actitud ante cualquier reto, conocedor de los procesos tecnológicos para crear funcionalidades y páginas web en PHP, WordPress, Java Scrip, y MYSQL. Es un persona honesta, integra, responsable, puntual y tengo a bien recomendarle, por lo que pueden contactarme en cualquier momento.",
+    "image": "testimonial-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Jesús Cabrera",
+    "role": "Software Developer",
+    "text": "Juan es un profesional dinámico, con visión empresarial y centrado en la implementación práctica de soluciones. Tiene la capacidad de crear funcionalidades a medida y aplicaciones web, logrando resultados satisfactorios en los ámbitos en que se desempeña. Juntos hemos desarrollado proyectos en Wordpress Personalizados, Tiendas E-commerce a Medidas y Mantenimientos de Servidores en Godaddy y Oracle.",
+    "image": "testimonial-3.jpg"
+  }
+]
+
