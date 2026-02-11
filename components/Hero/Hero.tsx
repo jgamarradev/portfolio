@@ -79,7 +79,7 @@ export default function Hero() {
             <div className="right-column">
               <div className="banner-img">
                 <Image
-                  src="/img/banner_image.png"
+                  src={getAssetPath('/img/banner_image.png')}
                   alt="hero_picture"
                   width={600}
                   height={600}

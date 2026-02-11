@@ -3,6 +3,7 @@
 import { useI18n } from '@/lib/i18n/context'
 import Image from 'next/image'
 import { Link } from 'react-scroll'
+import { getAssetPath } from '@/lib/utils/images'
 
 export default function About() {
   const { t } = useI18n()
@@ -53,7 +54,7 @@ export default function About() {
               <div className="col-sm-6">
                 <Image
                   className="img-fluid rounded"
-                  src="/img/about-1.jpg"
+                  src={getAssetPath('/img/about-1.jpg')}
                   alt="About 1"
                   width={300}
                   height={300}
@@ -62,7 +63,7 @@ export default function About() {
               <div className="col-sm-6">
                 <Image
                   className="img-fluid rounded"
-                  src="/img/about-2.jpg"
+                  src={getAssetPath('/img/about-2.jpg')}
                   alt="About 2"
                   width={300}
                   height={300}

@@ -45,7 +45,7 @@ export default function Header() {
         <div className="brand-logo">
           <div className="logo-container">
             <Image
-              src="/img/header_logo.png"
+              src={getAssetPath('/img/header_logo.png')}
               alt="header_logo"
               width={204}
               height={40}

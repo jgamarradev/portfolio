@@ -7,6 +7,7 @@ import { Testimonial } from '@/types'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
+import { getAssetPath } from '@/lib/utils/images'
 
 export default function Testimonials() {
   const { t } = useI18n()
@@ -24,7 +25,7 @@ export default function Testimonials() {
               <Image
                 className="img-fluid wow fadeIn"
                 data-wow-delay="0.1s"
-                src="/img/testimonial-1.jpg"
+                src={getAssetPath('/img/testimonial-1.jpg')}
                 alt=""
                 width={70}
                 height={70}
@@ -32,7 +33,7 @@ export default function Testimonials() {
               <Image
                 className="img-fluid wow fadeIn"
                 data-wow-delay="0.3s"
-                src="/img/testimonial-2.jpg"
+                src={getAssetPath('/img/testimonial-2.jpg')}
                 alt=""
                 width={60}
                 height={60}
@@ -40,7 +41,7 @@ export default function Testimonials() {
               <Image
                 className="img-fluid wow fadeIn"
                 data-wow-delay="0.5s"
-                src="/img/testimonial-3.jpg"
+                src={getAssetPath('/img/testimonial-3.jpg')}
                 alt=""
                 width={50}
                 height={50}
@@ -65,7 +66,7 @@ export default function Testimonials() {
                     <div className="position-relative mb-5">
                       <Image
                         className="img-fluid rounded-circle border border-secondary p-2 mx-auto"
-                        src={`/img/${testimonial.image}`}
+                        src={getAssetPath(`/img/${testimonial.image}`)}
                         alt={testimonial.name}
                         width={120}
                         height={120}
@@ -90,7 +91,7 @@ export default function Testimonials() {
               <Image
                 className="img-fluid wow fadeIn"
                 data-wow-delay="0.1s"
-                src="/img/testimonial-1.jpg"
+                src={getAssetPath('/img/testimonial-1.jpg')}
                 alt=""
                 width={70}
                 height={70}
@@ -98,7 +99,7 @@ export default function Testimonials() {
               <Image
                 className="img-fluid wow fadeIn"
                 data-wow-delay="0.3s"
-                src="/img/testimonial-2.jpg"
+                src={getAssetPath('/img/testimonial-2.jpg')}
                 alt=""
                 width={60}
                 height={60}
@@ -106,7 +107,7 @@ export default function Testimonials() {
               <Image
                 className="img-fluid wow fadeIn"
                 data-wow-delay="0.5s"
-                src="/img/testimonial-3.jpg"
+                src={getAssetPath('/img/testimonial-3.jpg')}
                 alt=""
                 width={50}
                 height={50}
