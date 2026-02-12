@@ -28,6 +28,7 @@ export interface WPProjectRaw {
   id: number;
   title: { rendered: string };
   excerpt: { rendered: string; protected: boolean };
+  featured_media: number;
   meta: {
     proyecto_url: string;
     descripcion_en: string;
@@ -35,22 +36,26 @@ export interface WPProjectRaw {
   };
   categoria_proyecto: number[];
   _embedded?: {
-    'wp:featuredmedia'?: Array<{
-      id: number;
-      source_url: string;
-      media_details?: {
-        sizes?: {
-          medium?: { source_url: string };
-          large?: { source_url: string };
-          full?: { source_url: string };
-        };
-      };
-    }>;
+    // Puede devolver un media válido o un error (code/message) cuando hay 401
+    'wp:featuredmedia'?: Array<
+      | {
+          id: number;
+          source_url: string;
+          media_details?: {
+            sizes?: {
+              medium?: { source_url: string };
+              large?: { source_url: string };
+              full?: { source_url: string };
+            };
+          };
+        }
+      | { code: string; message: string; data: { status: number } }
+    >;
     'wp:term'?: Array<Array<{
       id: number;
       name: string;
       slug: string;
-      meta?: { nombre_en?: string };
+      nombre_en?: string;
     }>>;
   };
 }

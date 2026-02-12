@@ -1,4 +1,4 @@
-import { Project, ProjectCategory, WPCategoryRaw } from '@/types'
+import { Project, ProjectCategory, WPProjectRaw, WPCategoryRaw } from '@/types'
 
 const WP_API_URL = process.env.NEXT_PUBLIC_WP_API_URL || ''
 
@@ -18,7 +18,7 @@ async function getMediaUrl(mediaId: number): Promise<string> {
   try {
     const res = await fetch(`${WP_API_URL}/media/${mediaId}`)
     if (!res.ok) return ''
-    const media = await res.json()
+    const media: { source_url?: string } = await res.json()
     return media.source_url || ''
   } catch {
     return ''
@@ -26,17 +26,18 @@ async function getMediaUrl(mediaId: number): Promise<string> {
 }
 
 /**
- * Extrae la URL de la imagen desde _embedded o hace fallback al endpoint de media.
- * La respuesta de _embed puede contener un objeto con source_url o un error con code/message.
+ * Extrae la URL de la imagen desde _embedded.
+ * La respuesta de _embed puede contener un media válido (con source_url)
+ * o un error (con code/message) cuando hay 401.
  */
-function getEmbeddedImageUrl(embedded: Record<string, unknown> | undefined): string {
+function getEmbeddedImageUrl(embedded: WPProjectRaw['_embedded']): string {
   const media = embedded?.['wp:featuredmedia']
-  if (!Array.isArray(media) || media.length === 0) return ''
+  if (!media || media.length === 0) return ''
 
   const firstMedia = media[0]
   // Si tiene source_url, es un media válido
-  if (firstMedia && typeof firstMedia === 'object' && 'source_url' in firstMedia) {
-    return (firstMedia as { source_url: string }).source_url
+  if ('source_url' in firstMedia) {
+    return firstMedia.source_url
   }
   // Si tiene 'code', es un error (ej: rest_forbidden)
   return ''
@@ -59,8 +60,7 @@ export async function getProjects(): Promise<Project[]> {
     throw new Error(`Error fetching projects: ${res.status}`)
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const data: any[] = await res.json()
+  const data: WPProjectRaw[] = await res.json()
 
   // Mapear los proyectos, resolviendo imágenes que necesiten fallback
   const projects = await Promise.all(
@@ -81,22 +81,18 @@ export async function getProjects(): Promise<Project[]> {
 
       return {
         id: item.id,
-        title: item.title?.rendered || '',
-        descriptionEs: stripHtml(item.excerpt?.rendered || ''),
-        descriptionEn: item.meta?.descripcion_en || '',
+        title: item.title.rendered,
+        descriptionEs: stripHtml(item.excerpt.rendered),
+        descriptionEn: item.meta.descripcion_en || '',
         image: imageUrl,
-        url: item.meta?.proyecto_url || '',
-        order: item.meta?.proyecto_orden || 0,
-        categories: Array.isArray(categoryTerms)
-          ? categoryTerms
-              .filter((term: Record<string, unknown>) => term && typeof term === 'object' && 'id' in term)
-              .map((term: Record<string, unknown>) => ({
-                id: term.id as number,
-                nameEs: (term.name as string) || '',
-                nameEn: ((term as Record<string, unknown>).nombre_en as string) || (term.name as string) || '',
-                slug: (term.slug as string) || '',
-              }))
-          : [],
+        url: item.meta.proyecto_url || '',
+        order: item.meta.proyecto_orden || 0,
+        categories: categoryTerms.map((term) => ({
+          id: term.id,
+          nameEs: term.name,
+          nameEn: term.nombre_en || term.name,
+          slug: term.slug,
+        })),
       }
     })
   )
