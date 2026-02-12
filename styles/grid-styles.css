@@ -98,122 +98,78 @@ MOVIL VERTICAL (320px)
   opacity: 1;
 }
 
-#portfolio-1:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/established.png")
-      center / cover no-repeat !important;
+/* Hover dinámico: cambia la opacidad del gradient al hacer hover */
+.item-portfolio:hover .portfolio-container {
+  background-blend-mode: overlay;
+  filter: brightness(1.1);
+  transition: filter 0.3s ease;
 }
 
-#portfolio-2:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/polymerfilms.png")
-      center / cover no-repeat !important;
+/*=============================================
+FILTROS DE CATEGORÍAS DEL PORTAFOLIO
+=============================================*/
+
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  padding: 0 20px;
 }
 
-#portfolio-3:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/xperi.png")
-      center / cover no-repeat !important;
+.portfolio-filters button {
+  padding: 8px 20px;
+  border: 2px solid #033faf;
+  border-radius: 25px;
+  background: transparent;
+  color: #033faf;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Raleway", sans-serif;
 }
 
-#portfolio-4:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/projectcoldcase.png")
-      center / cover no-repeat !important;
+.portfolio-filters button:hover,
+.portfolio-filters button.active {
+  background: #033faf;
+  color: white;
 }
 
-#portfolio-5:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/dts.png")
-      center / cover no-repeat !important;
+/* Estado de carga */
+.portfolio-loading {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+  font-size: 1.1rem;
 }
 
-#portfolio-6:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/tivo.png")
-      center / cover no-repeat !important;
+/* Aviso de error discreto */
+.portfolio-error-notice {
+  text-align: center;
+  color: #999;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
-#portfolio-7:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/martinhomeexteriors.png")
-      center / cover no-repeat !important;
+/* Animación del grid al filtrar */
+.grid_portfolio {
+  transition: all 0.3s ease;
 }
 
-#portfolio-8:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/allaboutpeds.png")
-      center / cover no-repeat !important;
+.item-portfolio {
+  animation: fadeIn 0.4s ease-in-out;
 }
 
-#portfolio-9:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/the_first_descendant.jpg")
-      center / cover no-repeat !important;
-}
-
-#portfolio-10:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/sky3pr.png")
-      center / cover no-repeat !important;
-}
-
-#portfolio-11:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/insyspr.png")
-      center / cover no-repeat !important;
-}
-
-#portfolio-12:hover .portfolio-container {
-  background: linear-gradient(
-      to right,
-      rgba(3, 63, 175, 0.9),
-      rgba(2, 134, 136, 0.9)
-    ),
-    url("https://raw.githubusercontent.com/jgamarradev/portfolio/main/intelutions.png")
-      center / cover no-repeat !important;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
