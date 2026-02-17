@@ -98,11 +98,15 @@ MOVIL VERTICAL (320px)
   opacity: 1;
 }
 
-/* Hover dinámico: cambia la opacidad del gradient al hacer hover */
+/* Hover: fondo con gradiente más intenso (azul → turquesa) como en el diseño original */
 .item-portfolio:hover .portfolio-container {
-  background-blend-mode: overlay;
-  filter: brightness(1.1);
-  transition: filter 0.3s ease;
+  background: linear-gradient(
+      to right,
+      rgba(3, 63, 175, 0.9),
+      rgba(2, 134, 136, 0.9)
+    ),
+    var(--portfolio-bg-image) center / cover no-repeat !important;
+  transition: background 0.3s ease;
 }
 
 /*=============================================

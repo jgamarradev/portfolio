@@ -57,18 +57,18 @@ export default function Hero() {
                 />
               </div>
               <div className="banner-text">
-                <p>
-                  {t('heroDescription').split('\n').map((line, i) => (
-                    <span key={i}>
-                      {line}
-                      {i < t('heroDescription').split('\n').length - 1 && <br />}
-                    </span>
-                  ))}
-                </p>
+                <p>{t('heroDescription')}</p>
               </div>
               <div className="download-cv">
                 <a
-                  href={getAssetPath('/curriculum/juanGamarraDevCvSpanish.pdf')}
+                  className="download-cv-link"
+                  href={getAssetPath(
+                    `/curriculum/${encodeURIComponent(
+                      language === 'es'
+                        ? 'Juan Gamarra - Senior Web Developer - Spanish.pdf'
+                        : 'Juan Gamarra - Senior Web Developer - English.pdf'
+                    )}`
+                  )}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

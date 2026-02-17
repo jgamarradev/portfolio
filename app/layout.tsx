@@ -14,7 +14,7 @@ const libreFranklin = Libre_Franklin({
 export const metadata: Metadata = {
   metadataBase: new URL('https://jgamarradev.github.io/portfolio'),
   title: 'Juan Gamarra - Desarrollador Web Fullstack - Portafolio',
-  description: '5 años creando experiencias web memorables. Confía en mi trayectoria y pasión para convertir tu sitio web en una herramienta poderosa para tu negocio.',
+  description: '6 años creando experiencias web memorables. Confía en mi trayectoria y pasión para convertir tu sitio web en una herramienta poderosa para tu negocio.',
   icons: {
     icon: getAssetPath('/img/header_logo.png'),
     shortcut: getAssetPath('/img/header_logo.png'),
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Juan Gamarra - Desarrollador Web - Fullstack Portafolio',
-    description: '5 años creando experiencias web memorables. Confía en mi trayectoria y pasión para convertir tu sitio web en una herramienta poderosa para tu negocio.',
+    description: '6 años creando experiencias web memorables. Confía en mi trayectoria y pasión para convertir tu sitio web en una herramienta poderosa para tu negocio.',
     url: 'https://jgamarradev.github.io/portfolio/',
     siteName: 'Juan Gamarra - Desarrollador Web Fullstack - Portafolio',
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Juan Gamarra - Desarrollador Web Fullstack - Portafolio',
-    description: '5 años creando experiencias web memorables. Confía en mi trayectoria y pasión para convertir tu sitio web en una herramienta poderosa para tu negocio.',
+    description: '6 años creando experiencias web memorables. Confía en mi trayectoria y pasión para convertir tu sitio web en una herramienta poderosa para tu negocio.',
     images: [getAssetPath('/img/opengraph-web.png')],
   },
   verification: {

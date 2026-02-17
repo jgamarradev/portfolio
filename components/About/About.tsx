@@ -15,7 +15,7 @@ export default function About() {
           <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
             <div className="d-flex align-items-center mb-5">
               <div className="years flex-shrink-0 text-center me-4">
-                <h1 className="display-1 mb-0">+5</h1>
+                <h1 className="display-1 mb-0">+6</h1>
                 <h5 className="mb-0">{t('aboutYears')}</h5>
               </div>
               <h3 className="lh-base mb-0">
@@ -44,6 +44,7 @@ export default function About() {
                 smooth={true}
                 offset={-80}
                 duration={500}
+                className="download-cv-link"
               >
                 {t('aboutReadMore')}
               </Link>

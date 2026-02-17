@@ -121,16 +121,21 @@ a.contact-button {
   margin-top: 25px;
 }
 
-.download-cv a {
+.download-cv a,
+.download-cv-link {
   padding: 15px 25px;
   border-radius: 10px;
   color: #00ee42;
   background: #033faf;
   font-weight: bold;
   border: 1px solid #00ee42;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, background 0.3s ease;
 }
 
-.download-cv a:hover {
+.download-cv a:hover,
+.download-cv-link:hover {
   padding: 15px 25px;
   border-radius: 10px;
   color: #033faf;

@@ -123,6 +123,7 @@ export default function Portfolio() {
                 <div
                   className="portfolio-container"
                   style={{
+                    ['--portfolio-bg-image' as string]: `url('${backgroundImage}')`,
                     background: `linear-gradient(to right, rgba(4, 67, 172, 0.6), rgba(4, 67, 172, 0.6)), url('${backgroundImage}') center / cover no-repeat`,
                   }}
                 >
